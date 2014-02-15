@@ -11,13 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140215141448) do
+ActiveRecord::Schema.define(version: 20140215142752) do
 
   create_table "boards", force: true do |t|
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "lists", force: true do |t|
+    t.integer  "board_id"
+    t.string   "name"
+    t.boolean  "archived"
+    t.integer  "position"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "lists", ["board_id"], name: "index_lists_on_board_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
