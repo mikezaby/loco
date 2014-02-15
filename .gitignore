@@ -1,0 +1,13 @@
+log/*.log
+tmp/**/*
+config/database.yml
+config/lamepress.yml
+public/media/**/*
+public/ckeditor_assets/**/*
+public/sitemap.xml
+.sass-cache/
+.bundle/
+bin/
+.rvmrc
+.ruby-version
+.ruby-gemset
