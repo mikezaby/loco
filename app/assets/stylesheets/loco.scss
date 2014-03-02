@@ -1,0 +1,52 @@
+$gray-darker:  lighten(#000, 13.5%);
+$gray-dark:    lighten(#000, 20%);
+$gray:         lighten(#000, 33.5%);
+$gray-light:   lighten(#000, 60%);
+$gray-lighter: lighten(#000, 93.5%);
+
+ul.boards {
+  margin-top: 10px;
+
+  > li {
+    padding-top: 0;
+    width: 250px;
+    height: 150px;
+    background: $gray-lighter;
+    color: $gray;
+    margin-bottom: 3px;
+
+    h1 {
+      font-size: 18px;
+      width: 100%;
+      float: left;
+    }
+
+    form {
+      float: left;
+      width: 100%;
+
+      textarea {
+        margin-right: 5px;
+        resize: none;
+        height: 80px;
+      }
+
+      .btn-success {
+        margin-top: -5px;
+        float: right;
+      }
+    }
+
+    .action {
+      float: right;
+      background: $gray-light;
+      margin-bottom: 5px;
+      a {
+        color: $gray-lighter;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
