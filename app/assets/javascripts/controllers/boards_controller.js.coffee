@@ -17,9 +17,10 @@ Loco.BoardsController = Ember.ArrayController.extend
       )
 
     destroy: (board) ->
-      board.destroyRecord().then(
+      board.deleteRecord()
+      return if !board.get('id')
+
+      board.save().then(
         ()=>,
         (error) => board.rollback()
       )
-
-
