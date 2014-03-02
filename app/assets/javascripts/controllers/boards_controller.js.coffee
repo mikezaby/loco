@@ -10,7 +10,7 @@ Loco.BoardsController = Ember.ArrayController.extend
       board.rollback() if onEdit
       board.set('onEdit', !onEdit)
 
-    update: (board) ->
+    save: (board) ->
       board.save().then(
         ()      => board.set('onEdit', false),
         (error) => board.rollback()
