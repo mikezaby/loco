@@ -19,7 +19,10 @@
     </div>
   </nav>
 
-  <%= yield %>
-
+  <script type="text/x-handlebars" name="application">
+    <div class="container-fluid">
+      {{outlet}}
+    </div>
+  </script>
 </body>
 </html>
