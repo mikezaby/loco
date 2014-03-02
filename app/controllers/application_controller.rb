@@ -15,6 +15,6 @@ class ApplicationController < ActionController::Base
       render json: resource, status: status
     end
   rescue ActiveRecord::RecordInvalid, ActiveRecord::RecordNotDestroyed
-    render json: resource, status: error_status
+    render json: { errors: resource.errors }, status: error_status
   end
 end
