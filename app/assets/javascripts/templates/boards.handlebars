@@ -1,0 +1,28 @@
+<button {{action 'new'}} class="btn btn-primary">New board</button>
+
+<ul class="list-inline boards">
+  {{#each}}
+    <li class="list-group-item">
+      <ul class="list-inline action">
+        {{#unless isNew}}
+          <li class="list-group-inline">
+            <span {{action 'edit' this}}class="glyphicon glyphicon-edit"></span>
+          </li>
+        {{/unless}}
+        <li class="list-group-inline">
+          <span {{action 'destroy' this}} class="glyphicon glyphicon-remove"></span>
+        </li>
+      </ul>
+      {{#if onEdit}}
+        <form role="form">
+          <div class="form-group">
+            {{textarea valueBinding='name' class="form-control"}}
+          </div>
+          <button {{action 'update' this}} class="btn btn-success btn-sm">Save</button>
+        </form>
+      {{else}}
+        <h1>{{name}}</h1>
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>
