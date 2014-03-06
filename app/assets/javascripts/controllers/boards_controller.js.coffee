@@ -13,7 +13,7 @@ Loco.BoardsController = Ember.ArrayController.extend
     save: (board) ->
       board.save().then(
         ()      => board.set('onEdit', false),
-        (error) => board.rollback()
+        (error) =>
       )
 
     destroy: (board) ->
