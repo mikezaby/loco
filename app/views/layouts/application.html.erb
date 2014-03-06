@@ -11,15 +11,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <%= link_to "Loco", root_path, class: 'navbar-brand' %>
-      </div>
-    </div>
-  </nav>
-
   <script type="text/x-handlebars" name="application">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          {{#link-to 'boards' class='navbar-brand'}}Loco{{/link-to}}
+        </div>
+      </div>
+    </nav>
+
     <div class="container-fluid">
       {{outlet}}
     </div>
