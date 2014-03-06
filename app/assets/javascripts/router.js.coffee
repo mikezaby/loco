@@ -1,3 +1,7 @@
 Loco.Router.map ()->
-  @resource('boards', { path: '/'  })
+  @route('boards', path: '/')
 
+  @resource('boards', path: '/boards')
+  @resource('board', path: '/boards/:board_id', ->
+    @resource('lists', path: '/lists')
+  )

@@ -1,4 +1,4 @@
-<button {{action 'new'}} class="btn btn-primary">New board</button>
+<button {{action 'new' controllers.board}} class="btn btn-primary">New List</button>
 <ul class="list-inline boards">
   {{#each}}
     <li class="list-group-item">
@@ -20,7 +20,7 @@
           <button {{action 'save' this}} class="btn btn-success btn-sm">Save</button>
         </form>
       {{else}}
-        <h1>{{#link-to 'board' this }}{{name}}{{/link-to}}</h1>
+        <h1>{{name}}</h1>
       {{/if}}
     </li>
   {{/each}}
